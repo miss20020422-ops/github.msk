@@ -1,107 +1,490 @@
 @charset "utf-8";
 
-body{
-    font-family: sans-serif;
-    background-color :#faebd7
-    background-image: url(../images/bg/italy-photo.jpg);
-    background-repeat: no-repeat;
-    background-position:left top
-    background-size : cover;
-    background-attachment : fixed;
-    margin-top: 50px;
- }
-
-h1{
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 700;
-    color: #ffffff;
-    font-size: 45px;
-    text-align: center;
-    text-shadow: 2px 2px 10px #6c6c6c;
-    font-family: "ヒラギノ明朝 ProN", serif;
-    font-weight :normal;
-    letter-spacing: 0.1em;
-    background-color :#ff0000;
-    width: 1000px;
-    border: #523700 6px solid;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 30px;
+.header {
+  background: #fff;
+  padding: 20px 8%;
+  font-family: "Brush Script MT", cursive;
 }
 
-
-h2{
-    color: #ffffff;
-    background-color :#00ad00
-     width: 1000px;
-     margin: 0 auto 40px auto;
-     color: #ffffff;
-     background-color: #00ad00;
-     border-left: 8px solid #006400;
-     text-indent: 6px;
-     box-sizing: border-box;
-}
-
-/*p {
-  font-size: 20px;
-  line-height:1.75;
-  font-weight :bold;
-  text-decoration :none;
-  text-indent: 1em;
-  font-style: italic;
-  background-image: url(../images/bg/stripe.png);
-}*/
-
-.main-text{
-    font: size: 20px;
-    line-height: 1.75;
-    width: 1000px;
-    margin: 0 auto 40px auto;
-    font-size: 20px;
-    line-height: 1.75;
-    border-bottom: 2px dashed #444;
-    box-sizing: border-box;
-    margin-top: 30px;
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
  }
 
- img{
-    display: block;
-    margin: 0 auto;
-  }
- 
-
-.list-item{
-    font: size: 20px;
-    line-height: 2;
- }
-
-ol li{
-    line-height: 1.8;
- }
-
- .copyright-text{
-   font-family:"Roboto",serif;
-   font-weight:400;
-   font-size: 14px
-   text-align: center;
-  }
-
-  .btn {
-  background-color: #ff7535;
-  width: 200px;
-  height: 40px;
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  line-height: 40px;
+.logo a{
+  font-family: "Brush Script MT", cursive;
+  font-size: 24px;
   text-decoration: none;
-  font-size: 14px;
-  font-family: sans-serif;
-  font-weight: bold;
-  border-radius: 40px;
-  box-shadow: 1px 1px 3px #949494;
-  background: linear-gradient(45deg, #ef4c00, #ff8e5a);
+  color: #79440d;
+  font-weight: normal;
+ }
+
+.nav a {
+  margin-left: 35px;
+  text-decoration: none;
+  font-family: "Brush Script MT", cursive;
+  color: #79440d;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+ }
+
+.nav a:hover {
+  opacity: 0.7;
+ }
+.hero {
+      width: 100%;
+      height: 750px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-image: url("hero-bg.png.png");
+ }
+
+.hero-text {
+  font-family:'Noto Serif JP',serif;
+  font-size:67px;
+  font-weight: 400;
+  color: #79440d;
+  text-align: center;
+ }
+
+.hero-text span {
+  text-shadow:4px 4px 10px #FFB66B
 }
 
-.btn:hover {
-  background: linear-gradient(to bottom, #ff7535, #b83a00);
+ .name{
+  font-family:'Noto Serif JP',serif;
+  font-size:25px;
+  font-weight: 400;
+  color: #79440d;
+  text-align: center;
+ }
+
+.title {
+      color: #79440d;
+      font-size: 38px;
+      line-height: 1.8;
+      letter-spacing: 0.12em;
+      font-weight: normal;
+ }
+
+.name {
+      margin-top: 25px;
+      color: #79440d;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+ }
+
+.profile {
+  padding: 90px 10%;
+  background: #fff;
+  color: #79440d;
+  font-family:'Noto Serif JP',serif;
+ }
+
+.profile-title {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 55px;
+ }
+
+.profile-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+.profile-title span {
+  font-size: 14px;
+  letter-spacing: 0.4em;
+ }
+
+.profile-inner {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+ }
+
+.profile-image {
+  width: 43%;
+ }
+
+.profile-image img {
+  width: 100%;
+  display: block;
+ }
+
+.profile-text {
+  width: 50%;
+ }
+
+.profile-text h3 {
+  font-size: 38px;
+  font-weight: normal;
+  margin-bottom: 12px;
+ }
+
+.profile-text .job {
+  font-size: 14px;
+  margin-bottom: 55px;
+ }
+
+.profile-text h4 {
+  font-size: 22px;
+  font-weight: normal;
+  letter-spacing: 0.15em;
+  margin-bottom: 25px;
+ }
+
+.profile-text p {
+  font-size: 14px;
+  line-height: 2.4;
+  letter-spacing: 0.08em;
+ }
+
+.skill {
+  padding: 90px 10%;
+  background:
+    url("skill.back.png") center / cover no-repeat;
+  color: #79440d;
+  font-family: 'Noto Serif JP', serif;
+  position: relative;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  margin-bottom: 55px;
+ }
+
+.skill-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+.skill-title span {
+  font-size: 14px;
+  letter-spacing: 0.35em;
+ }
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px;
+ }
+
+.skill-card {
+  background: #fff;
+  padding: 45px 26px;
+  min-height: 250px;
+ }
+
+.skill-card img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 28px;
+ }
+
+.skill-card h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 24px;
+ }
+
+.skill-card p {
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+ }
+
+ .works {
+  padding: 80px 12%;
+  background: #fff;
+  color: #79440d;
+  font-family:'Noto Serif JP',serif;
+ }
+
+.works-title {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 40px;
+ }
+
+.works-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+.works-title span {
+  font-size: 14px;
+  letter-spacing: 0.25em;
+ }
+
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(2, 575px);
+  gap: 45px 35px;
+ }
+
+.work-item img {
+  width: 575px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+ }
+
+.work-item h3 {
+  font-size: 28px;
+  font-weight: normal;
+  margin: 18px 0 18px;
+ }
+
+.tags {
+  display: flex;
+  gap: 10px;
+ }
+
+.tags span {
+  border: 1px solid #c79b75;
+  padding: 4px 10px;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+ }
+
+.hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
+.more-btn-wrap {
+  grid-column: 1 / -1;   /* 2列分使う */
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+ }
+
+.more-btn {
+  display: inline-block;
+  padding: 10px 42px;
+  background: #fff; 
+  border: 1px solid #b88a62;
+  color: #79440d;
+  text-decoration: none;
+  font-family:'Noto Serif JP',serif;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+ }
+
+.lp-design {
+  padding: 90px 10%;
+   background:
+    url("LP.back.png") center / cover no-repeat;
+  background: #fffdf4;
+  color: #79440d;
+  font-family: 'Noto Serif JP', serif;
+ }
+
+.lp-title {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 35px;
+ }
+
+.lp-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+.lp-title span {
+  font-size: 14px;
+  letter-spacing: 0.3em;
+ }
+
+.lp-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+ }
+
+.lp-image {
+  width: 48%;
+ }
+
+.lp-image img {
+  width: 100%;
+  display: block;
+ }
+
+.lp-text {
+  width: 45%;
+ }
+
+.lp-text h3 {
+  font-size: 36px;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  margin-bottom: 18px;
+ }
+
+.lp-text p {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+ }
+
+.hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
+.lp-btn {
+  display: inline-block;
+  padding: 10px 38px;
+  background: #fff;
+  border: 1px solid #b88a62;
+  color: #79440d;
+  text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  letter-spacing: 0.25em;
+}
+
+.wix-design {
+  padding: 90px 12%;
+  background: #fff;
+  color: #79440d;
+  font-family: 'Noto Serif JP', serif;
+ }
+
+.wix-title {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 30px;
+ }
+
+.wix-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: normal;
+  margin: 0;
+ }
+
+.wix-title span {
+  font-size: 14px;
+  letter-spacing: 0.3em;
+ }
+
+.wix-inner {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+ }
+
+.wix-text {
+  width: 42%;
+ }
+
+.wix-text h3 {
+  font-size: 36px;
+  font-weight: normal;
+  margin-bottom: 22px;
+ }
+
+.wix-text p {
+  font-size: 16px;
+  line-height: 2.1;
+  letter-spacing: 0.08em;
+  margin-bottom: 25px;
+ }
+
+.wix-image {
+  width: 48%;
+ }
+
+.wix-image img {
+  width: 100%;
+  display: block;
+ }
+
+ .hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
+ .wix-btn {
+  display: inline-block;
+  padding: 10px 38px;
+  background: #fff;
+  border: 1px solid #b88a62;
+  color: #79440d;
+  text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  letter-spacing: 0.25em;
+ }
+
+ .footer {
+  background:
+    url("back.footer.png") center / cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #79440d;
+  font-family: 'Noto Serif JP', serif;
+ }
+
+.footer-inner h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 48px;
+  font-weight: normal;
+  margin-bottom: 30px;
+ }
+
+.footer-nav {
+  margin-bottom: 25px;
+ }
+
+.footer-nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #7a3f00;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+ }
+
+.footer-nav a:hover {
+  opacity: 0.7;
+ }
+
+.copy {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+ }
