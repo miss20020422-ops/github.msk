@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+body{
+    font-family: sans-serif;
+    background-color :#faebd7
+    background-image: url(../images/bg/italy-photo.jpg);
+    background-repeat: no-repeat;
+    background-position:left top
+    background-size : cover;
+    background-attachment : fixed;
+    margin-top: 50px;
+ }
+
+h1{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 45px;
+    text-align: center;
+    text-shadow: 2px 2px 10px #6c6c6c;
+    font-family: "ヒラギノ明朝 ProN", serif;
+    font-weight :normal;
+    letter-spacing: 0.1em;
+    background-color :#ff0000;
+    width: 1000px;
+    border: #523700 6px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 30px;
+}
+
+
+h2{
+    color: #ffffff;
+    background-color :#00ad00
+     width: 1000px;
+     margin: 0 auto 40px auto;
+     color: #ffffff;
+     background-color: #00ad00;
+     border-left: 8px solid #006400;
+     text-indent: 6px;
+     box-sizing: border-box;
+}
+
+/*p {
+  font-size: 20px;
+  line-height:1.75;
+  font-weight :bold;
+  text-decoration :none;
+  text-indent: 1em;
+  font-style: italic;
+  background-image: url(../images/bg/stripe.png);
+}*/
+
+.main-text{
+    font: size: 20px;
+    line-height: 1.75;
+    width: 1000px;
+    margin: 0 auto 40px auto;
+    font-size: 20px;
+    line-height: 1.75;
+    border-bottom: 2px dashed #444;
+    box-sizing: border-box;
+    margin-top: 30px;
+ }
+
+ img{
+    display: block;
+    margin: 0 auto;
+  }
+ 
+
+.list-item{
+    font: size: 20px;
+    line-height: 2;
+ }
+
+ol li{
+    line-height: 1.8;
+ }
+
+ .copyright-text{
+   font-family:"Roboto",serif;
+   font-weight:400;
+   font-size: 14px
+   text-align: center;
+  }
+
+  .btn {
+  background-color: #ff7535;
+  width: 200px;
+  height: 40px;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 40px;
+  box-shadow: 1px 1px 3px #949494;
+  background: linear-gradient(45deg, #ef4c00, #ff8e5a);
+}
+
+.btn:hover {
+  background: linear-gradient(to bottom, #ff7535, #b83a00);

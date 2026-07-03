@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+.contact-page {
+  width: 100%
+  padding: 90px 0%;
+  background:url("contact.back.png")center / cover no-repeat;
+  color: #79440D;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.contact-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.section-title h2 {
+  font-family: "Brush Script MT", cursive;
+  font-size: 88px;
+  font-weight: 400;
+  margin: 0;
+  color: #79440D;
+}
+
+.section-title span {
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: #79440D;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.contact-lead {
+  font-size: 25px;
+  line-height: 1.8;
+  margin-bottom: 45px;
+  color: #79440D;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 28px;
+  color: #79440D;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 10px;
+  border: 1px solid #79440D;
+  background: #79440D(255,255,255,0.75);
+  font-family: 'Noto Serif JP', serif;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+.contact-form input {
+  height: 34px;
+}
+
+.contact-form textarea {
+  height: 230px;
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 35px;
+  width: 260px;
+  height: 72px;
+  border: 1px solid #79440D;
+  background: #79440D(255,255,255,0.75);
+  color: #79440D;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #79440D;
+  color: #fff;
+}
