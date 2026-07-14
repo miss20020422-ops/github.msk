@@ -259,8 +259,86 @@ else if($confirmDsp == 1){
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-<meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport contact=width-device-widh,initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet"href="css/contact.css">
+
+    <link rel="stylesheet" href="css/portoforio.css">
+    <body>
+    <header class="header">
+  <div class="header-inner">
+    <h1 class="logo">
+      <a href="portoforio.html#top">FORMS</a>
+    </h1>
+    
+    <nav class="nav">
+  <a href="portoforio.html#profile">Profile</a>
+  <a href="portoforio.html#skill">Skill</a>
+  <a href="portoforio.html#works">Works</a>
+ <a href="contact-form.html">Contact</a>
+</nav>
+  </div>
+</head>
+
+<body>
+
+   <section id="contact-form" class="contact-page">
+
+  <div class="contact-inner">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+      <span>お問い合わせ</span>
+    </div>
+
+    <p class="contact-lead">
+      制作の依頼・ご相談などお気軽にお問い合わせください。<br>
+      下記フォームよりわかる範囲でご記入ください。<br>
+      必須項目は必ずご記入をお願いします。
+    </p>
+
+    <form class="contact-form">
+
+      <label>
+        貴社名
+        <input type="text">
+      </label>
+
+      <label>
+        お名前
+        <input type="text" required>
+      </label>
+
+      <label>
+        メールアドレス
+        <input type="email" required>
+      </label>
+
+      <label>
+        電話番号
+        <input type="tel">
+      </label>
+
+      <label>
+        お問合せ内容
+        <textarea></textarea>
+      </label>
+
+      <button type="submit">
+        内容を送信する
+      </button>
+
+    </form>
+
+  </div>
+
+</section>
+
+</body>
+</html>
+
+<head>
 <title>確認画面</title>
 <style type="text/css">
 /* 自由に編集下さい */
