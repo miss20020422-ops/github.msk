@@ -4,7 +4,12 @@
   background: #fff;
   padding: 20px 8%;
   font-family: "Brush Script MT", cursive;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1000;
 
 .header-inner {
   display: flex;
