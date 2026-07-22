@@ -23,7 +23,7 @@ body {
   display: flex;
   align-items: center;
 
-  background-color: #fff;
+  background: red !important;
   box-sizing: border-box;
   z-index: 99999;
 }
