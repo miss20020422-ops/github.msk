@@ -1,16 +1,39 @@
 @charset "utf-8";
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  padding-top: 90px;
+}
+
 .header {
-  background: #fff;
-  padding: 20px 8%;
-  font-family: "Brush Script MT", cursive;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+
+  width: 100%;
+  height: 90px;
+  padding: 0 8%;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #fff;
+  box-sizing: border-box;
+  z-index: 99999;
 }
 
 .header-inner {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
- }
+}
 
 .logo a{
   font-family: "Brush Script MT", cursive;
@@ -264,17 +287,29 @@
   letter-spacing: 0.15em;
  }
 
+.hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
 .more-btn-wrap {
-  text-align: center;
+  grid-column: 1 / -1;   /* 2列分使う */
+  display: flex;
+  justify-content: center;
   margin-top: 55px;
  }
 
 .more-btn {
   display: inline-block;
   padding: 10px 42px;
+  background: #fff; 
   border: 1px solid #b88a62;
   color: #79440d;
   text-decoration: none;
+  font-family:'Noto Serif JP',serif;
   font-size: 16px;
   letter-spacing: 0.3em;
  }
@@ -340,17 +375,27 @@
   margin-bottom: 20px;
  }
 
+.hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
 .lp-btn {
   display: inline-block;
   padding: 10px 38px;
+  background: #fff;
   border: 1px solid #b88a62;
   color: #79440d;
   text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
   font-size: 16px;
   letter-spacing: 0.25em;
- }
+}
 
- .wix-design {
+.wix-design {
   padding: 90px 12%;
   background: #fff;
   color: #79440d;
@@ -379,7 +424,6 @@
 .wix-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 55px;
  }
 
@@ -400,16 +444,6 @@
   margin-bottom: 25px;
  }
 
-.wix-btn {
-  display: inline-block;
-  padding: 10px 38px;
-  border: 1px solid #b88a62;
-  color: #79440d;
-  text-decoration: none;
-  font-size: 16px;
-  letter-spacing: 0.25em;
- }
-
 .wix-image {
   width: 48%;
  }
@@ -417,6 +451,26 @@
 .wix-image img {
   width: 100%;
   display: block;
+ }
+
+ .hidden-work {
+  display: none;
+}
+
+.hidden-work.show {
+  display: block;
+}
+
+ .wix-btn {
+  display: inline-block;
+  padding: 10px 38px;
+  background: #fff;
+  border: 1px solid #b88a62;
+  color: #79440d;
+  text-decoration: none;
+  font-family: 'Noto Serif JP', serif;
+  font-size: 16px;
+  letter-spacing: 0.25em;
  }
 
  .footer {
