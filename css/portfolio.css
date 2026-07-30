@@ -375,12 +375,18 @@ body {
   margin-bottom: 20px;
  }
 
-.hidden-work {
+.hidden-web-work {
   display: none;
 }
 
-.hidden-work.show {
+.hidden-web-work.show {
   display: block;
+}
+
+.lp-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
 
 .lp-btn {
@@ -392,7 +398,8 @@ body {
   text-decoration: none;
   font-family: 'Noto Serif JP', serif;
   font-size: 16px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
+  cursor: pointer;
 }
 
 .wix-design {
