@@ -361,22 +361,26 @@ body {
 
 .lp-text {
   width: 45%;
- }
+  color: #79440d;
+}
 
 .lp-text h3 {
+  margin: 0 0 18px;
+  color: #79440d;
+  font-family: "Noto Serif JP", serif;
   font-size: 36px;
   font-weight: normal;
   letter-spacing: 0.25em;
-  margin-bottom: 18px;
- }
+}
 
 .lp-text p {
+  margin: 0;
+  color: #79440d;
+  font-family: "Noto Serif JP", serif;
   font-size: 16px;
   line-height: 2;
   letter-spacing: 0.08em;
-  margin-bottom: 20px;
- }
-
+}
 .lp-more-btn {
   display: flex;
   justify-content: center;
