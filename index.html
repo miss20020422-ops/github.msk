@@ -196,23 +196,17 @@
 
 </section>
 
-<section class="lp-design">
-  <div class="lp-title">
-    <h2>LP Design</h2>
-    <span>ランディングページ</span>
-  </div>
+    <div class="lp-inner">
+     <div class="lp-image">
+       <a
+         href="https://miss20020422.wixsite.com/w-b-c"
+         target="_blank"
+         rel="noopener noreferrer">
+         <img src="css/lp-design.jpg.png" alt="WBCランディングページ">
+       </a>
+     </div>
 
-  <div class="lp-inner">
-    <div class="lp-image">
-      <a
-        href="https://miss20020422.wixsite.com/w-b-c"
-        target="_blank"
-        rel="noopener noreferrer">
-       <img src="css/lp-design.jpg.png" alt="WBCランディングページ">
-      </a>
-    </div>
-
-    <div class="lp-text">
+     <div class="lp-text">
       <h3>W B C</h3>
 
       <p>
@@ -221,12 +215,17 @@
         女性をターゲットに、やさしく清らかなトーンで<br>
         統一し、円形モチーフで一日のリズムを表現しています。
       </p>
-    </div>     
-  </div>
- <!-- ここで lp-inner が終わる -->
+     </div>     
+   </div>
 
-  <div class="lp-btn-wrap">
-    <button type="button" id="moreBtn" class="lp-btn">
+   <!-- 追加作品：最初は非表示 -->
+   <div class="lp-inner hidden-lp-work">
+    <!-- 追加作品 -->
+   </div>
+  </div>
+
+  <div class="lp-more-btn-wrap">
+    <button type="button" id="lpMoreBtn" class="more-btn">
       もっと見る
     </button>
   </div>
@@ -238,6 +237,9 @@
     <span>ホームページ制作</span>
   </div>
 
+<div class="wix-list">
+
+  <!-- 最初から表示する作品 -->
   <div class="wix-inner">
     <div class="wix-text">
       <h3>The annex.</h3>
@@ -248,16 +250,30 @@
         働く人の動きや空気感を、動きのある写真とタイポグラフィで<br>
         表現し、空間の活気や利用効率が伝わるデザインを意識しています。
       </p>
-
-      <button type="button" id="morewixBtn" class="wix-btn">
-        もっと見る
-      </button>
     </div>
 
     <div class="wix-image">
-      <img src="css/wix-design.jpg.png" alt="Wix制作実績">
+      <a
+        href="https://miss20020422.wixsite.com/the-annex"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+       <img src="css/wix-design.jpg.png" alt="Wix制作実績">
+      </a>
     </div>
   </div>
+
+  <!-- 追加作品：最初は非表示 -->
+   <div class="wix hidden-wix-work">
+    <!-- 追加作品 -->
+   </div>
+</div>
+
+<div class="wix-more-btn-wrap">
+  <button type="button" id="wixMoreBtn" class="more-btn">
+    もっと見る
+  </button>
+</div>
 </section>
 
 <footer class="footer">
@@ -276,16 +292,48 @@
 </footer>
 
 <script>
+  // バナー作品
   const moreBtn = document.getElementById("moreBtn");
-  const hiddenWorks = document.querySelectorAll(".hidden-work");
+  const hiddenWorks =
+    document.querySelectorAll(".hidden-work");
 
-  moreBtn.addEventListener("click", function () {
-    hiddenWorks.forEach(function (work) {
-      work.classList.add("show");
+  if (moreBtn) {
+    moreBtn.addEventListener("click", function () {
+      hiddenWorks.forEach(function (work) {
+        work.classList.add("show");
+      });
+
+      moreBtn.style.display = "none";
     });
+  }
 
-    moreBtn.style.display = "none";
-  });
+  // LP作品
+  const lpMoreBtn = document.getElementById("lpMoreBtn");
+  const hiddenLpWorks =
+    document.querySelectorAll(".hidden-lp-work");
+
+  if (lpMoreBtn) {
+    lpMoreBtn.addEventListener("click", function () {
+      hiddenLpWorks.forEach(function (work) {
+        work.classList.add("show");
+      });
+
+      lpMoreBtn.style.display = "none";
+    });
+  }
+
+  // Wix作品
+  const wixMoreBtn = document.getElementById("wixMoreBtn");
+  const hiddenWixWorks =
+    document.querySelectorAll(".hidden-wix-work");
+
+  if (wixMoreBtn) {
+    wixMoreBtn.addEventListener("click", function () {
+      hiddenWixWorks.forEach(function (work) {
+        work.classList.add("show");
+      });
+
+      wixMoreBtn.style.display = "none";
+    });
+  }
 </script>
-    </body>
-</html>
