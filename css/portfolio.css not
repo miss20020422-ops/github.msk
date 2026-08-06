@@ -316,12 +316,14 @@ body {
 
 .lp-design {
   padding: 90px 10%;
-   background:
-    url("LP.back.png") center / cover no-repeat;
-  background: #fffdf4;
+  background-color: #fffdf4;
+  background-image: url("LP.back.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #79440d;
-  font-family: 'Noto Serif JP', serif;
- }
+  font-family: "Noto Serif JP", serif;
+}
 
 .lp-title {
   display: flex;
@@ -375,31 +377,9 @@ body {
   margin-bottom: 20px;
  }
 
-.hidden-web-work {
-  display: none;
-}
-
-.hidden-web-work.show {
-  display: block;
-}
-
-.lp-btn-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.lp-btn {
-  display: inline-block;
-  padding: 10px 38px;
-  background: #fff;
-  border: 1px solid #b88a62;
-  color: #79440d;
-  text-decoration: none;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 16px;
-  letter-spacing: 0.2em;
-  cursor: pointer;
+.site-btn:hover {
+  background: #79440d;
+  color: #fff;
 }
 
 .wix-design {
@@ -468,17 +448,27 @@ body {
   display: block;
 }
 
- .wix-btn {
+ .site-btn {
   display: inline-block;
-  padding: 10px 38px;
+  margin-top: 20px;
+  padding: 12px 38px;
+
   background: #fff;
   border: 1px solid #b88a62;
   color: #79440d;
+
   text-decoration: none;
   font-family: 'Noto Serif JP', serif;
   font-size: 16px;
-  letter-spacing: 0.25em;
- }
+  letter-spacing: 0.2em;
+
+  transition: 0.3s;
+}
+
+.site-btn:hover {
+  background: #79440d;
+  color: #fff;
+}
 
  .footer {
   background:
@@ -518,3 +508,53 @@ body {
   font-size: 11px;
   letter-spacing: 0.08em;
  }
+
+ /* LPの追加作品 */
+.hidden-lp-work {
+  display: none;
+}
+
+.hidden-lp-work.show {
+  display: flex;
+}
+
+/* Wixの追加作品 */
+.hidden-wix-work {
+  display: none;
+}
+
+.hidden-wix-work.show {
+  display: flex;
+}
+
+/* もっと見るボタンの位置 */
+.lp-more-btn-wrap,
+.wix-more-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+}
+
+/* 共通のもっと見るボタン */
+.more-btn {
+  padding: 10px 42px;
+  border: 1px solid #b88a62;
+  background: #fff;
+  color: #79440d;
+  font-family: "Noto Serif JP", serif;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+  cursor: pointer;
+}
+
+.more-btn:hover {
+  background: #79440d;
+  color: #fff;
+}
+
+.lp-list,
+.wix-list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
