@@ -377,10 +377,23 @@ body {
   margin-bottom: 20px;
  }
 
-.site-btn:hover {
-  background: #79440d;
-  color: #fff;
-}
+.lp-more-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+ }
+
+.more-btn {
+  display: inline-block;
+  padding: 10px 42px;
+  background: #fff; 
+  border: 1px solid #b88a62;
+  color: #79440d;
+  text-decoration: none;
+  font-family:'Noto Serif JP',serif;
+  font-size: 16px;
+  letter-spacing: 0.3em;
+ }
 
 .wix-design {
   padding: 90px 12%;
