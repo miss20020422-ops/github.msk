@@ -130,3 +130,206 @@
   font-size: 11px;
   letter-spacing: 0.08em;
  }
+
+/* =========================
+   Contact Responsive
+========================= */
+
+/* ---------- タブレット ---------- */
+@media screen and (max-width: 1024px) {
+
+  .contact-page {
+    padding: 70px 0;
+  }
+
+  .contact-inner {
+    width: 88%;
+    max-width: 820px;
+  }
+
+  .section-title h2 {
+    font-size: 72px;
+  }
+
+  .section-title span {
+    font-size: 13px;
+  }
+
+  .contact-lead {
+    font-size: 20px;
+    line-height: 1.9;
+  }
+
+  .contact-form label {
+    font-size: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form button {
+    width: 240px;
+    height: 64px;
+  }
+
+  .footer {
+    padding: 70px 20px;
+  }
+}
+
+
+/* ---------- スマホ ---------- */
+@media screen and (max-width: 767px) {
+
+  .contact-page {
+    padding: 55px 0;
+  }
+
+  .contact-inner {
+    width: 90%;
+    max-width: none;
+  }
+
+  /* タイトル */
+  .section-title {
+    gap: 16px;
+    margin-bottom: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .section-title h2 {
+    font-size: 52px;
+    line-height: 1;
+  }
+
+  .section-title span {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+  }
+
+  /* 説明文 */
+  .contact-lead {
+    margin-bottom: 35px;
+    font-size: 16px;
+    line-height: 2;
+  }
+
+  /* 改行をスマホで自然にする */
+  .contact-lead br {
+    display: none;
+  }
+
+  /* フォーム */
+  .contact-form label {
+    margin-bottom: 24px;
+    font-size: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .contact-form input {
+    height: 44px;
+  }
+
+  .contact-form textarea {
+    min-height: 170px;
+  }
+
+  /* 送信ボタン */
+  .contact-form button {
+    display: block;
+    width: 220px;
+    height: 56px;
+    margin: 28px auto 0;
+    font-size: 14px;
+  }
+
+  /* フッター */
+  .footer {
+    padding: 50px 15px;
+  }
+
+  .footer-inner h2 {
+    font-size: 38px;
+    margin-bottom: 22px;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .footer-nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+}
+
+
+/* ---------- 小さいスマホ ---------- */
+@media screen and (max-width: 480px) {
+
+  .contact-page {
+    padding: 45px 0;
+  }
+
+  .contact-inner {
+    width: 92%;
+  }
+
+  .section-title {
+    gap: 12px;
+  }
+
+  .section-title h2 {
+    font-size: 46px;
+  }
+
+  .section-title span {
+    font-size: 10px;
+  }
+
+  .contact-lead {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .contact-form label {
+    font-size: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    min-height: 150px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    max-width: 220px;
+    height: 52px;
+  }
+
+  .footer {
+    padding: 40px 15px;
+  }
+}
