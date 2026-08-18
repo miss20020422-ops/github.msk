@@ -528,3 +528,371 @@ textarea {
   flex-direction: column;
   gap: 70px;
 }
+
+/* =========================
+   Responsive
+========================= */
+
+/* ---------- タブレット ---------- */
+@media screen and (max-width: 1024px) {
+
+  .header {
+    padding: 0 5%;
+  }
+
+  .nav a {
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  .hero {
+    height: 620px;
+  }
+
+  .hero-text {
+    font-size: 52px;
+  }
+
+  .profile,
+  .skill,
+  .works,
+  .lp-design,
+  .wix-design {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+  .profile-inner {
+    gap: 45px;
+  }
+
+  .skill-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .works-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+  .work-item img {
+    width: 100%;
+  }
+
+  .lp-inner,
+  .wix-inner {
+    gap: 35px;
+  }
+
+  .lp-text p,
+  .wix-text p {
+    font-size: 14px;
+  }
+}
+
+
+/* ---------- スマホ ---------- */
+@media screen and (max-width: 768px) {
+
+  html {
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  /* ヘッダー */
+  .header {
+    height: 80px;
+    padding: 0 4%;
+  }
+
+  .logo a {
+    font-size: 20px;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+  }
+
+
+  /* HERO */
+  .hero {
+    height: 500px;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    line-height: 1.6;
+  }
+
+  .name {
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+
+  /* 共通セクション */
+  .profile,
+  .skill,
+  .works,
+  .lp-design,
+  .wix-design {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+
+
+  /* 共通タイトル */
+  .profile-title,
+  .skill-title,
+  .works-title,
+  .lp-title,
+  .wix-title {
+    gap: 16px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+  }
+
+  .profile-title h2,
+  .skill-title h2,
+  .works-title h2,
+  .lp-title h2,
+  .wix-title h2 {
+    font-size: 56px;
+  }
+
+  .profile-title span,
+  .skill-title span,
+  .works-title span,
+  .lp-title span,
+  .wix-title span {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+  }
+
+
+  /* Profile */
+  .profile-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 35px;
+  }
+
+  .profile-image {
+    width: 100%;
+  }
+
+  .profile-text {
+    width: 100%;
+  }
+
+  .profile-text h3 {
+    font-size: 30px;
+  }
+
+  .profile-text .job {
+    margin-bottom: 30px;
+  }
+
+  .profile-text h4 {
+    font-size: 18px;
+  }
+
+  .profile-text p {
+    font-size: 13px;
+    line-height: 2;
+  }
+
+
+  /* Skill */
+  .skill-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-card {
+    min-height: auto;
+    padding: 30px 24px;
+  }
+
+  .skill-card img {
+    margin-bottom: 20px;
+  }
+
+
+  /* Works */
+  .works-list {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .work-item img {
+    width: 100%;
+  }
+
+  .work-item h3 {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .more-btn-wrap {
+    grid-column: 1;
+    margin-top: 15px;
+  }
+
+  .more-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+
+
+  /* LP */
+  .lp-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .lp-image {
+    width: 100%;
+  }
+
+  .lp-text {
+    width: 100%;
+  }
+
+  .lp-text h3 {
+    font-size: 28px;
+  }
+
+  .lp-text p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+
+  /* Wix */
+  .wix-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .wix-text,
+  .wix-image {
+    width: 100%;
+  }
+
+  .wix-text h3 {
+    font-size: 28px;
+  }
+
+  .wix-text p {
+    font-size: 14px;
+    line-height: 2;
+  }
+
+
+  /* Footer */
+  .footer {
+    padding: 60px 20px;
+  }
+
+  .footer-inner h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 22px;
+  }
+
+  .footer-nav a {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  .copy {
+    font-size: 10px;
+  }
+}
+
+
+/* ---------- 小さいスマホ ---------- */
+@media screen and (max-width: 480px) {
+
+  .header {
+    height: auto;
+    min-height: 80px;
+    padding: 12px 4%;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  body {
+    padding-top: 105px;
+  }
+
+  html {
+    scroll-padding-top: 105px;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    height: 430px;
+  }
+
+  .hero-text {
+    font-size: 30px;
+  }
+
+  .profile-title h2,
+  .skill-title h2,
+  .works-title h2,
+  .lp-title h2,
+  .wix-title h2 {
+    font-size: 48px;
+  }
+
+  .profile-text h3,
+  .lp-text h3,
+  .wix-text h3 {
+    font-size: 24px;
+  }
+
+  .work-item h3 {
+    font-size: 18px;
+  }
+
+  .footer {
+    padding: 45px 15px;
+  }
+}
