@@ -896,3 +896,183 @@ textarea {
     padding: 45px 15px;
   }
 }
+
+/* =========================
+   Works Modal
+========================= */
+
+.work-item img {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.work-item img:hover {
+  opacity: 0.85;
+}
+
+/* モーダル全体 */
+.work-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+}
+
+/* 開いた状態 */
+.work-modal.show {
+  display: flex;
+}
+
+/* 背景 */
+.work-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50, 35, 20, 0.55);
+}
+
+/* 白いポップアップ */
+.work-modal-content {
+  position: relative;
+  z-index: 1;
+
+  width: min(1000px, 90vw);
+  max-height: 90vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+
+  padding: 45px;
+
+  background: #fffdf8;
+  color: #79440d;
+
+  font-family: "Noto Serif JP", serif;
+
+  overflow-y: auto;
+}
+
+/* ×ボタン */
+.work-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+
+  border: none;
+  background: transparent;
+
+  color: #79440d;
+  font-size: 35px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+/* 作品画像 */
+.work-modal-image img {
+  width: 100%;
+  display: block;
+}
+
+/* DETAIL */
+.modal-label {
+  margin-bottom: 10px;
+
+  font-size: 11px;
+  letter-spacing: 0.3em;
+}
+
+/* タイトル */
+.work-modal-text h2 {
+  margin-bottom: 30px;
+
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 1.5;
+}
+
+/* 要件定義 */
+.work-detail {
+  margin: 0;
+}
+
+.work-detail div {
+  padding: 18px 0;
+  border-top: 1px solid #d8c0aa;
+}
+
+.work-detail div:last-child {
+  border-bottom: 1px solid #d8c0aa;
+}
+
+.work-detail dt {
+  margin-bottom: 8px;
+
+  font-size: 13px;
+  letter-spacing: 0.15em;
+}
+
+.work-detail dd {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =========================
+   Works Modal スマホ
+========================= */
+
+@media screen and (max-width: 767px) {
+
+  .work-modal {
+    padding: 20px;
+  }
+
+  .work-modal-content {
+    width: 100%;
+    max-height: 88vh;
+
+    grid-template-columns: 1fr;
+    gap: 25px;
+
+    padding: 40px 25px 30px;
+  }
+
+  .work-modal-image {
+    width: 100%;
+  }
+
+  .work-modal-image img {
+    width: 100%;
+  }
+
+  .work-modal-text h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .work-detail div {
+    padding: 14px 0;
+  }
+
+  .work-detail dt {
+    font-size: 12px;
+  }
+
+  .work-detail dd {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .work-modal-close {
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+  }
+}
