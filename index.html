@@ -386,13 +386,18 @@
 </footer>
 
 <script>
-  // バナー作品
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* =========================
+     バナー「もっと見る」
+  ========================= */
+
   const moreBtn = document.getElementById("moreBtn");
-  const hiddenWorks =
-    document.querySelectorAll(".hidden-work");
+  const hiddenWorks = document.querySelectorAll(".hidden-work");
 
   if (moreBtn) {
     moreBtn.addEventListener("click", function () {
+
       hiddenWorks.forEach(function (work) {
         work.classList.add("show");
       });
@@ -401,29 +406,31 @@
     });
   }
 
-<script>
-  // =========================
-  // Works 詳細モーダル
-  // =========================
 
-  document.addEventListener("DOMContentLoaded", function () {
+  /* =========================
+     Works 詳細モーダル
+  ========================= */
 
-    const workItems = document.querySelectorAll(".work-item");
-    const workModal = document.getElementById("workModal");
+  const workItems = document.querySelectorAll(".work-item");
+  const workModal = document.getElementById("workModal");
 
-    const modalImage = document.getElementById("modalImage");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalPurpose = document.getElementById("modalPurpose");
-    const modalMedia = document.getElementById("modalMedia");
-    const modalTarget = document.getElementById("modalTarget");
-    const modalMessage = document.getElementById("modalMessage");
-    const modalPoint = document.getElementById("modalPoint");
-    const modalTime = document.getElementById("modalTime");
+  const modalImage = document.getElementById("modalImage");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalPurpose = document.getElementById("modalPurpose");
+  const modalMedia = document.getElementById("modalMedia");
+  const modalTarget = document.getElementById("modalTarget");
+  const modalMessage = document.getElementById("modalMessage");
+  const modalPoint = document.getElementById("modalPoint");
+  const modalTime = document.getElementById("modalTime");
 
-    const modalClose = document.querySelector(".work-modal-close");
-    const modalOverlay = document.querySelector(".work-modal-overlay");
+  const modalClose = document.querySelector(".work-modal-close");
+  const modalOverlay = document.querySelector(".work-modal-overlay");
+
+
+  if (workModal) {
 
     workItems.forEach(function (item) {
+
       const image = item.querySelector("img");
 
       if (!image) return;
@@ -433,33 +440,67 @@
         modalImage.src = image.src;
         modalImage.alt = image.alt;
 
-        modalTitle.textContent = item.dataset.title || "";
-        modalPurpose.textContent = item.dataset.purpose || "";
-        modalMedia.textContent = item.dataset.media || "";
-        modalTarget.textContent = item.dataset.target || "";
-        modalMessage.textContent = item.dataset.message || "";
-        modalPoint.textContent = item.dataset.point || "";
-        modalTime.textContent = item.dataset.time || "";
+        modalTitle.textContent =
+          item.dataset.title || "";
+
+        modalPurpose.textContent =
+          item.dataset.purpose || "";
+
+        modalMedia.textContent =
+          item.dataset.media || "";
+
+        modalTarget.textContent =
+          item.dataset.target || "";
+
+        modalMessage.textContent =
+          item.dataset.message || "";
+
+        modalPoint.textContent =
+          item.dataset.point || "";
+
+        modalTime.textContent =
+          item.dataset.time || "";
 
         workModal.classList.add("show");
+
         document.body.style.overflow = "hidden";
       });
+
     });
 
-    function closeWorkModal() {
-      workModal.classList.remove("show");
-      document.body.style.overflow = "";
-    }
+  }
 
-    if (modalClose) {
-      modalClose.addEventListener("click", closeWorkModal);
-    }
 
-    if (modalOverlay) {
-      modalOverlay.addEventListener("click", closeWorkModal);
-    }
+  /* =========================
+     モーダルを閉じる
+  ========================= */
 
-  });
+  function closeWorkModal() {
+
+    if (!workModal) return;
+
+    workModal.classList.remove("show");
+
+    document.body.style.overflow = "";
+  }
+
+
+  if (modalClose) {
+    modalClose.addEventListener(
+      "click",
+      closeWorkModal
+    );
+  }
+
+
+  if (modalOverlay) {
+    modalOverlay.addEventListener(
+      "click",
+      closeWorkModal
+    );
+  }
+
+});
 </script>
 
   // LP作品
@@ -491,4 +532,5 @@
       wixMoreBtn.style.display = "none";
     });
   }
+</body>
 </script>
