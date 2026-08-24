@@ -122,7 +122,7 @@
     <span>実績・バナーデザイン</span>
   </div>
 
-  <!-- 最初から表示 -->
+ <!-- 最初から表示 -->
   <div class="works-list">
     <div class="work-item"
          data-title="冬服セール広告"
@@ -401,87 +401,66 @@
     });
   }
 
-// =========================
-// Works 詳細モーダル
-// =========================
+<script>
+  // =========================
+  // Works 詳細モーダル
+  // =========================
 
-const workItems = document.querySelectorAll(".work-item");
-const workModal = document.getElementById("workModal");
+  document.addEventListener("DOMContentLoaded", function () {
 
-const modalImage = document.getElementById("modalImage");
-const modalTitle = document.getElementById("modalTitle");
-const modalPurpose = document.getElementById("modalPurpose");
-const modalMedia = document.getElementById("modalMedia");
-const modalTarget = document.getElementById("modalTarget");
-const modalMessage = document.getElementById("modalMessage");
-const modalDesign = document.getElementById("modalDesign");
-const modalPoint = document.getElementById("modalPoint");
-const modalTime = document.getElementById("modalTime");
+    const workItems = document.querySelectorAll(".work-item");
+    const workModal = document.getElementById("workModal");
 
-const modalClose =
-  document.querySelector(".work-modal-close");
+    const modalImage = document.getElementById("modalImage");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPurpose = document.getElementById("modalPurpose");
+    const modalMedia = document.getElementById("modalMedia");
+    const modalTarget = document.getElementById("modalTarget");
+    const modalMessage = document.getElementById("modalMessage");
+    const modalPoint = document.getElementById("modalPoint");
+    const modalTime = document.getElementById("modalTime");
 
-const modalOverlay =
-  document.querySelector(".work-modal-overlay");
+    const modalClose = document.querySelector(".work-modal-close");
+    const modalOverlay = document.querySelector(".work-modal-overlay");
 
+    workItems.forEach(function (item) {
+      const image = item.querySelector("img");
 
-workItems.forEach(function (item) {
+      if (!image) return;
 
-  const image = item.querySelector("img");
+      image.addEventListener("click", function () {
 
-  image.addEventListener("click", function () {
+        modalImage.src = image.src;
+        modalImage.alt = image.alt;
 
-    modalImage.src = image.src;
-    modalImage.alt = image.alt;
+        modalTitle.textContent = item.dataset.title || "";
+        modalPurpose.textContent = item.dataset.purpose || "";
+        modalMedia.textContent = item.dataset.media || "";
+        modalTarget.textContent = item.dataset.target || "";
+        modalMessage.textContent = item.dataset.message || "";
+        modalPoint.textContent = item.dataset.point || "";
+        modalTime.textContent = item.dataset.time || "";
 
-    modalTitle.textContent =
-      item.dataset.title;
+        workModal.classList.add("show");
+        document.body.style.overflow = "hidden";
+      });
+    });
 
-    modalPurpose.textContent =
-      item.dataset.purpose;
+    function closeWorkModal() {
+      workModal.classList.remove("show");
+      document.body.style.overflow = "";
+    }
 
-    modalMedia.textContent = 
-      item.dataset.media;
-    
-    modalTarget.textContent =
-      item.dataset.target;
+    if (modalClose) {
+      modalClose.addEventListener("click", closeWorkModal);
+    }
 
-    modalMessage.textContent = 
-      item.dataset.message;
+    if (modalOverlay) {
+      modalOverlay.addEventListener("click", closeWorkModal);
+    }
 
-    modalDesign.textContent =
-      item.dataset.design;
-
-    modalPoint.textContent =
-      item.dataset.point;
-
-    modalTime.textContent =
-      item.dataset.time;
-
-    workModal.classList.add("show");
-
-    document.body.style.overflow = "hidden";
   });
-
-});
-
-
-function closeWorkModal() {
-  workModal.classList.remove("show");
-
-  document.body.style.overflow = "";
-}
-
-
-modalClose.addEventListener(
-  "click",
-  closeWorkModal
-);
-
-modalOverlay.addEventListener(
-  "click",
-  closeWorkModal
-);
+</script>
 
   // LP作品
   const lpMoreBtn = document.getElementById("lpMoreBtn");
