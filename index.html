@@ -122,15 +122,28 @@
     <span>実績・バナーデザイン</span>
   </div>
 
- <!-- 最初から表示 -->
+  <!-- 最初から表示 -->
   <div class="works-list">
-    <div class="work-item">
-      <img src="css/work01.jpg.png" alt="冬服セール広告">
-      <h3>冬服セール広告</h3>
-      <div class="tags">
+    <div class="work-item"
+         data-title="冬服セール広告"
+         data-purpose="SNS上でSALEを認識させ、サイトへのアクセス・クリックを促し、購入につなげること。"
+         data-media="Instagram（フィード投稿/広告）"
+         data-target="20代後半〜30代前半の都内勤務の女性。
+                      淡色コーデや大人っぽいキレイめシンプルを好み、
+                      安さよりも上質さや品の良さを重視する層を想定しています。"
+         data-message="ブランドの上品な世界観を保ちながら、冬の上質なアイテムを特別価格で購入できること。"
+         data-point="ホワイト・ベージュ・グレージュの淡いニュアンスカラーで統一。
+                     70%OFFはアンティークゴールドで強調しながら上品さを維持しました。
+                     欧文フォントや余白を活かし、静かな空気感とブランドらしい高級感を表現しています。"
+         data-time="約3時間">
+      
+     <img src="css/work01.jpg.png" alt="冬服セール広告">
+     <h3>冬服セール広告</h3>
+     
+     <div class="tags">
         <span>SALE</span>
         <span>FASHION</span>
-      </div>
+     </div>
     </div>
 
     <div class="work-item">
@@ -196,7 +209,74 @@
 
 </section>
 
-    <section class="lp-design">
+<!-- Works 詳細ポップアップ -->
+<div class="work-modal" id="workModal">
+
+  <div class="work-modal-overlay"></div>
+
+  <div class="work-modal-content">
+
+    <button type="button"
+            class="work-modal-close"
+            aria-label="閉じる">
+      ×
+    </button>
+
+    <div class="work-modal-image">
+      <img id="modalImage" src="" alt="">
+    </div>
+
+    <div class="work-modal-text">
+
+      <p class="modal-label">WORK DETAIL</p>
+
+      <h2 id="modalTitle"></h2>
+
+      <dl class="work-detail">
+
+        <div>
+          <dt>目的</dt>
+          <dd id="modalPurpose"></dd>
+        </div>
+
+        <div>
+          <dt>掲載媒体</dt>
+          <dd id="modalMedia"></dd>
+        </div>
+
+        <div>
+          <dt>ターゲット</dt>
+          <dd id="modalTarget"></dd>
+        </div>
+
+        <div>
+         <dt>訴求内容</dt>
+         <dd id="modalMessage"></dd>
+        </div>
+
+        <div>
+          <dt>デザイン</dt>
+          <dd id="modalDesign"></dd>
+        </div>
+
+        <div>
+          <dt>制作ポイント</dt>
+          <dd id="modalPoint"></dd>
+        </div>
+
+        <div>
+          <dt>制作時間</dt>
+          <dd id="modalTime"></dd>
+        </div>
+
+      </dl>
+
+    </div>
+
+  </div>
+</div>
+
+<section class="lp-design">
   <div class="lp-title">
     <h2>LP Design</h2>
     <span>ランディングページ</span>
@@ -320,6 +400,88 @@
       moreBtn.style.display = "none";
     });
   }
+
+// =========================
+// Works 詳細モーダル
+// =========================
+
+const workItems = document.querySelectorAll(".work-item");
+const workModal = document.getElementById("workModal");
+
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalPurpose = document.getElementById("modalPurpose");
+const modalMedia = document.getElementById("modalMedia");
+const modalTarget = document.getElementById("modalTarget");
+const modalMessage = document.getElementById("modalMessage");
+const modalDesign = document.getElementById("modalDesign");
+const modalPoint = document.getElementById("modalPoint");
+const modalTime = document.getElementById("modalTime");
+
+const modalClose =
+  document.querySelector(".work-modal-close");
+
+const modalOverlay =
+  document.querySelector(".work-modal-overlay");
+
+
+workItems.forEach(function (item) {
+
+  const image = item.querySelector("img");
+
+  image.addEventListener("click", function () {
+
+    modalImage.src = image.src;
+    modalImage.alt = image.alt;
+
+    modalTitle.textContent =
+      item.dataset.title;
+
+    modalPurpose.textContent =
+      item.dataset.purpose;
+
+    modalMedia.textContent = 
+      item.dataset.media;
+    
+    modalTarget.textContent =
+      item.dataset.target;
+
+    modalMessage.textContent = 
+      item.dataset.message;
+
+    modalDesign.textContent =
+      item.dataset.design;
+
+    modalPoint.textContent =
+      item.dataset.point;
+
+    modalTime.textContent =
+      item.dataset.time;
+
+    workModal.classList.add("show");
+
+    document.body.style.overflow = "hidden";
+  });
+
+});
+
+
+function closeWorkModal() {
+  workModal.classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+
+modalClose.addEventListener(
+  "click",
+  closeWorkModal
+);
+
+modalOverlay.addEventListener(
+  "click",
+  closeWorkModal
+);
 
   // LP作品
   const lpMoreBtn = document.getElementById("lpMoreBtn");
