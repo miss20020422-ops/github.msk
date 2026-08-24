@@ -135,7 +135,8 @@
          data-point="ホワイト・ベージュ・グレージュの淡いニュアンスカラーで統一。
                      70%OFFはアンティークゴールドで強調しながら上品さを維持しました。
                      欧文フォントや余白を活かし、静かな空気感とブランドらしい高級感を表現しています。"
-         data-time="約3時間">
+         data-tool="Canva"
+      　 data-time="約3時間">
       
      <img src="css/work01.jpg.png" alt="冬服セール広告">
      <h3>冬服セール広告</h3>
@@ -264,6 +265,11 @@
           <dd id="modalPoint"></dd>
         </div>
 
+        <div>
+          <dt>使用ツール</dt>
+          <dd id="modalTool"></dd>
+        </div>
+        
         <div>
           <dt>制作時間</dt>
           <dd id="modalTime"></dd>
@@ -421,6 +427,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalTarget = document.getElementById("modalTarget");
   const modalMessage = document.getElementById("modalMessage");
   const modalPoint = document.getElementById("modalPoint");
+  const modalTool = document.getElementById("modalTool");
   const modalTime = document.getElementById("modalTime");
 
   const modalClose = document.querySelector(".work-modal-close");
@@ -457,6 +464,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         modalPoint.textContent =
           item.dataset.point || "";
+
+        modalTool.textContent =
+          item.dataset.tool || "";
 
         modalTime.textContent =
           item.dataset.time || "";
