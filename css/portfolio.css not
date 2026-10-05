@@ -359,9 +359,11 @@ body {
   display: block;
  }
 
-.lp-text {
-  width: 45%;
- }
+.lp-image img {
+   width: 100%;
+   height: 280px;
+   object-fit: cover;
+   object-position: top;
 
 .lp-text h3 {
   font-size: 36px;
