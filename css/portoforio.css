@@ -375,6 +375,11 @@ textarea {
   letter-spacing: 0.08em;
 }
 
+/* LP 2作品目 */
+.lp-second {
+  margin-top: 80px;
+}
+
 .wix-design {
   background: #fff;
   color: #79440d;
