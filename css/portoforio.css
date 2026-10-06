@@ -343,6 +343,7 @@ textarea {
 
 .lp-image {
   width: 48%;
+　overflow: hidden;
  }
 
 .lp-image img {
