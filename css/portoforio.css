@@ -381,6 +381,23 @@ textarea {
   margin-top: 80px;
 }
 
+/* LP画像まわりの装飾線を消す */
+.lp-image::before,
+.lp-image::after,
+.lp-inner::before,
+.lp-inner::after {
+  content: none !important;
+  display: none !important;
+}
+
+.lp-image,
+.lp-image a,
+.lp-image img {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 .wix-design {
   background: #fff;
   color: #79440d;
