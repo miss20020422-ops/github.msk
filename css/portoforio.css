@@ -322,7 +322,7 @@ textarea {
 
 .lp-design {
   background-color: #fffdf4;
-  background-image: url("LP.back.png");
+  background-image: none;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -379,23 +379,6 @@ textarea {
 /* LP 2作品目 */
 .lp-second {
   margin-top: 80px;
-}
-
-/* LP画像まわりの装飾線を消す */
-.lp-image::before,
-.lp-image::after,
-.lp-inner::before,
-.lp-inner::after {
-  content: none !important;
-  display: none !important;
-}
-
-.lp-image,
-.lp-image a,
-.lp-image img {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 .wix-design {
@@ -509,23 +492,6 @@ textarea {
 
 .hidden-lp-work.show {
   display: flex;
-}
-
-/* LP画像まわりの装飾線を消す */
-.lp-image::before,
-.lp-image::after,
-.lp-inner::before,
-.lp-inner::after {
-  content: none !important;
-  display: none !important;
-}
-
-.lp-image,
-.lp-image a,
-.lp-image img {
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
 }
 
 /* Wixの追加作品 */
