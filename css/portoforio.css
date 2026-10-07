@@ -384,7 +384,6 @@ textarea {
   margin-top: 80px;
 }
 
-
 /* =========================
    LP画像
    クリックでWORK DETAIL
@@ -400,30 +399,32 @@ textarea {
 }
 
 
-/* =========================
-   サイトページへボタン
-========================= */
-
+/* サイトページへボタン */
 .lp-site-btn {
   display: inline-block;
   margin-top: 30px;
-  padding: 12px 32px;
+  padding: 14px 45px;
 
-  border: 1px solid #79440d;
-  background-color: transparent;
+  border: 1px solid #b77a45;
+  background-color: #fff;
 
   color: #79440d;
   font-family: "Noto Serif JP", serif;
-  font-size: 14px;
-  letter-spacing: 0.15em;
+  font-size: 16px;
+  font-weight: normal;
+  letter-spacing: 0.3em;
+
   text-decoration: none;
+  text-align: center;
 
   transition: 0.3s;
+  cursor: pointer;
 }
 
 .lp-site-btn:hover {
   background-color: #79440d;
-  color: #fffdf8;
+  border-color: #79440d;
+  color: #fff;
 }
 
 .wix-design {
