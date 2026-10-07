@@ -322,7 +322,7 @@ textarea {
 
 .lp-design {
   background-color: #fffdf4;
-  background-image: none;
+  background-image: url("LP.back.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
