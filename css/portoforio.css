@@ -343,7 +343,6 @@ textarea {
 
 .lp-image {
   width: 48%;
-　overflow: hidden;
  }
 
 .lp-image img {
@@ -351,6 +350,7 @@ textarea {
    height: 280px;
    object-fit: cover;
    object-position: top;
+   display: block;
  }
 
 .lp-text {
@@ -376,9 +376,54 @@ textarea {
   letter-spacing: 0.08em;
 }
 
-/* LP 2作品目 */
-.lp-second {
+/* =========================
+   2作品目との間隔
+========================= */
+
+.lp-inner + .lp-inner {
   margin-top: 80px;
+}
+
+
+/* =========================
+   LP画像
+   クリックでWORK DETAIL
+========================= */
+
+.lp-work .lp-image img {
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.lp-work .lp-image img:hover {
+  opacity: 0.8;
+}
+
+
+/* =========================
+   サイトページへボタン
+========================= */
+
+.lp-site-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 32px;
+
+  border: 1px solid #79440d;
+  background-color: transparent;
+
+  color: #79440d;
+  font-family: "Noto Serif JP", serif;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.lp-site-btn:hover {
+  background-color: #79440d;
+  color: #fffdf8;
 }
 
 .wix-design {
