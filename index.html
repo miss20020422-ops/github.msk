@@ -514,7 +514,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalImage = document.getElementById("modalImage");
   const modalTitle = document.getElementById("modalTitle");
   const modalPurpose = document.getElementById("modalPurpose");
+
+  /* 掲載媒体 */
   const modalMedia = document.getElementById("modalMedia");
+  const modalMediaRow = document.getElementById("modalMediaRow");
+
   const modalTarget = document.getElementById("modalTarget");
   const modalMessage = document.getElementById("modalMessage");
   const modalPoint = document.getElementById("modalPoint");
@@ -525,7 +529,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalOverlay = document.querySelector(".work-modal-overlay");
 
 
-  /* 作品画像をクリック */
+  /* =========================
+     作品画像をクリック
+  ========================= */
+
   workItems.forEach(function (item) {
 
     const image = item.querySelector("img");
@@ -543,9 +550,6 @@ document.addEventListener("DOMContentLoaded", function () {
       modalPurpose.textContent =
         item.dataset.purpose || "";
 
-      modalMedia.textContent =
-        item.dataset.media || "";
-
       modalTarget.textContent =
         item.dataset.target || "";
 
@@ -561,6 +565,25 @@ document.addEventListener("DOMContentLoaded", function () {
       modalTool.textContent =
         item.dataset.tool || "";
 
+
+      /* =========================
+         LPだけ掲載媒体を非表示
+      ========================= */
+
+      if (item.classList.contains("lp-work")) {
+
+        modalMediaRow.style.display = "none";
+
+      } else {
+
+        modalMediaRow.style.display = "";
+        modalMedia.textContent =
+          item.dataset.media || "";
+
+      }
+
+
+      /* モーダルを表示 */
       workModal.classList.add("show");
 
       document.body.style.overflow = "hidden";
