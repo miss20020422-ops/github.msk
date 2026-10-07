@@ -488,15 +488,13 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================
-     バナー「もっと見る」
+     もっと見る
   ========================= */
-
   const moreBtn = document.getElementById("moreBtn");
   const hiddenWorks = document.querySelectorAll(".hidden-work");
 
   if (moreBtn) {
     moreBtn.addEventListener("click", function () {
-
       hiddenWorks.forEach(function (work) {
         work.classList.add("show");
       });
@@ -507,10 +505,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   /* =========================
-     Works 詳細モーダル
+     WORK DETAIL モーダル
+     バナー + LP
   ========================= */
 
-  const workItems = document.querySelectorAll(".work-item");
+  const workItems = document.querySelectorAll(".work-item, .lp-work");
+
   const workModal = document.getElementById("workModal");
 
   const modalImage = document.getElementById("modalImage");
@@ -520,58 +520,56 @@ document.addEventListener("DOMContentLoaded", function () {
   const modalTarget = document.getElementById("modalTarget");
   const modalMessage = document.getElementById("modalMessage");
   const modalPoint = document.getElementById("modalPoint");
-  const modalTool = document.getElementById("modalTool");
   const modalTime = document.getElementById("modalTime");
+  const modalTool = document.getElementById("modalTool");
 
   const modalClose = document.querySelector(".work-modal-close");
   const modalOverlay = document.querySelector(".work-modal-overlay");
 
 
-  if (workModal) {
+  /* 作品画像をクリック */
+  workItems.forEach(function (item) {
 
-    workItems.forEach(function (item) {
+    const image = item.querySelector("img");
 
-      const image = item.querySelector("img");
+    if (!image) return;
 
-      if (!image) return;
+    image.addEventListener("click", function () {
 
-      image.addEventListener("click", function () {
+      modalImage.src = image.src;
+      modalImage.alt = image.alt;
 
-        modalImage.src = image.src;
-        modalImage.alt = image.alt;
+      modalTitle.textContent =
+        item.dataset.title || "";
 
-        modalTitle.textContent =
-          item.dataset.title || "";
+      modalPurpose.textContent =
+        item.dataset.purpose || "";
 
-        modalPurpose.textContent =
-          item.dataset.purpose || "";
+      modalMedia.textContent =
+        item.dataset.media || "";
 
-        modalMedia.textContent =
-          item.dataset.media || "";
+      modalTarget.textContent =
+        item.dataset.target || "";
 
-        modalTarget.textContent =
-          item.dataset.target || "";
+      modalMessage.textContent =
+        item.dataset.message || "";
 
-        modalMessage.textContent =
-          item.dataset.message || "";
+      modalPoint.textContent =
+        item.dataset.point || "";
 
-        modalPoint.textContent =
-          item.dataset.point || "";
+      modalTime.textContent =
+        item.dataset.time || "";
 
-        modalTool.textContent =
-          item.dataset.tool || "";
+      modalTool.textContent =
+        item.dataset.tool || "";
 
-        modalTime.textContent =
-          item.dataset.time || "";
+      workModal.classList.add("show");
 
-        workModal.classList.add("show");
-
-        document.body.style.overflow = "hidden";
-      });
+      document.body.style.overflow = "hidden";
 
     });
 
-  }
+  });
 
 
   /* =========================
@@ -580,61 +578,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeWorkModal() {
 
-    if (!workModal) return;
-
     workModal.classList.remove("show");
 
     document.body.style.overflow = "";
+
   }
 
 
   if (modalClose) {
-    modalClose.addEventListener(
-      "click",
-      closeWorkModal
-    );
+    modalClose.addEventListener("click", closeWorkModal);
   }
 
 
   if (modalOverlay) {
-    modalOverlay.addEventListener(
-      "click",
-      closeWorkModal
-    );
+    modalOverlay.addEventListener("click", closeWorkModal);
   }
 
 });
-</script>
-    
-<script>
-  // LP作品
-  const lpMoreBtn = document.getElementById("lpMoreBtn");
-  const hiddenLpWorks =
-    document.querySelectorAll(".hidden-lp-work");
-
-  if (lpMoreBtn) {
-    lpMoreBtn.addEventListener("click", function () {
-      hiddenLpWorks.forEach(function (work) {
-        work.classList.add("show");
-      });
-
-      lpMoreBtn.style.display = "none";
-    });
-  }
-
-  // Wix作品
-  const wixMoreBtn = document.getElementById("wixMoreBtn");
-  const hiddenWixWorks =
-    document.querySelectorAll(".hidden-wix-work");
-
-  if (wixMoreBtn) {
-    wixMoreBtn.addEventListener("click", function () {
-      hiddenWixWorks.forEach(function (work) {
-        work.classList.add("show");
-      });
-
-      wixMoreBtn.style.display = "none";
-    });
-  }
-</body>
 </script>
