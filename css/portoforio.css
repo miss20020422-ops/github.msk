@@ -293,10 +293,19 @@ textarea {
   margin: 18px 0 18px;
  }
 
-/* 横長バナーを切らずに表示 */
-.work-item:has(img[src*="work08.jpg.png"]) img {
+/* =========================
+   WORK 8 横長バナー
+   正方形の枠に全体表示
+========================= */
+
+.work-wide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
   object-fit: contain;
+  object-position: center;
   background-color: #fffdf4;
+  display: block;
 }
 
 .tags {
